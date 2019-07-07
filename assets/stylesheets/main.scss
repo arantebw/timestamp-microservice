@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 $primary-color: #009688;
+$font-color: #333;
 
 * {
     padding: 0;
@@ -11,14 +12,17 @@ $primary-color: #009688;
 body {
     background-color: $primary-color;
     font-family: 'Nunito', sans-serif;
-
+    color: $font-color;
+    
     h1 {
-	line-height: 2;
 	text-align: center;
+	padding: 25px 0;
+	letter-spacing: 2px;
+	text-transform: lowercase;
     }
     
     main {
-	width: 80%;
+	width: 90%;
 	height: 100vh;
 	margin: 0 auto;
 	background-color: #fff;
@@ -31,6 +35,7 @@ body {
 	bottom: 0;
 	width: 100%;
 	line-height: 2;
+	font-size: 12px;
 	
 	div {
 	    ul {
