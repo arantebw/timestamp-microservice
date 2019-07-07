@@ -9,17 +9,18 @@ const sass = require('node-sass-middleware');
 
 const app = express();
 
-app.use(express.static(__dirname + '/public'));
-
 // Font Awesome
 app.use('/fontawesome', express.static(__dirname + '/node_modules/@fortawesome/fontawesome-free/'));
 
 // Sass
 app.use(sass({
-  src: __dirname + '/assets/sass',
-  dest: __dirname + '/public/css',
-  debug: true
+  src: __dirname + "/assets",
+  dest: __dirname + "/public",
+  debug: true,
+  outputStyle: "compressed",
 }));
+
+app.use(express.static(__dirname + "/public"));
 
 // Enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // So that your API is remotely testable by FCC 
