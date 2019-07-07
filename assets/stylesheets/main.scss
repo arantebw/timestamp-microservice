@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
 
 $primary-color: #009688;
+$secondary-color: #ff5722;
 $font-color: #333;
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+a {
+    color: $font-color;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px dotted $font-color;
+}
+
+a:hover {
+    color: #000;
+    border-bottom: 1px solid #000;
 }
 
 body {
@@ -19,6 +32,7 @@ body {
 	padding: 25px 0;
 	letter-spacing: 2px;
 	text-transform: lowercase;
+	color: $secondary-color;
     }
     
     main {
@@ -36,6 +50,7 @@ body {
 	width: 100%;
 	line-height: 2;
 	font-size: 12px;
+	padding: 8px 0;
 	
 	div {
 	    ul {
@@ -43,6 +58,7 @@ body {
 
 		li {
 		    display: inline-block;
+		    padding: 0 3px;
 		}
 	    }
 	}
