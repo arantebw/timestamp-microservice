@@ -19,13 +19,16 @@
   <body>
 
     <main>
-      <h1><span>abw's</span> Timestamp Microservice</h1>
-
+      <div>
+	<h1><span>abw's</span> Timestamp Microservice</h1>
+	<form method="GET" action="/api/timestamp">
+	  <label for="date-string" >Enter a date or UNIX timestamp</label><br>
+	  <input type="text" placeholder="e.g., 2019-07-09 or 1562630400000" name="date_string" id="date-string">
+	  <input type="submit" value="Send">
+	</form>
+      </div>
+      
       <section>
-	<h2>How To Use This Tool?</h2>
-	<p>https://abw-timestamp-microservice.herokuapp.com/</p>
-	<p>https://abw-timestamp-microservice.herokuapp.com/api/timestamp/2019-07-07</p>
-	<p>https://abw-timestamp-microservice.herokuapp.com/api/timestamp/1562457600000</p>
 	<h2>About</h2>
       </section>
       
