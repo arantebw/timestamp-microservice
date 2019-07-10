@@ -38,6 +38,10 @@ body {
     padding: 25px;
     letter-spacing: 2px;
     font-size: 26px;
+    a {
+      color: $secondary-color;
+      border: none;
+    }
   }
 
   h2 {
@@ -60,7 +64,6 @@ body {
     position: relative;
 
     div {
-
       form {
         margin-bottom: 25px;
         padding: 0 15px;
@@ -98,6 +101,8 @@ body {
       p {
         padding: 0 15px;
         margin-bottom: 10px;
+        line-height: 2;
+        font-size: 14px;
       }
 
       div {
@@ -106,6 +111,12 @@ body {
           line-height: 2;
           margin-bottom: 10px;
           padding-left: 30px;
+          font-size: 14px;
+        }
+
+        img {
+          padding-left: 30px;
+          width: 90%;
         }
       }
     }
