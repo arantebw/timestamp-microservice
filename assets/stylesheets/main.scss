@@ -33,16 +33,23 @@ body {
     color: $secondary-color;
   }
 
-  h2 {
-    font-size: 24px;
-    padding: 0 15px;
-  }
- 
   h1 {
     text-align: center;
     padding: 25px;
     letter-spacing: 2px;
     font-size: 26px;
+  }
+
+  h2 {
+    font-size: 24px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 22px;
+    padding: 0 30px;
+    margin-bottom: 10px;
   }
  
   main {
@@ -86,6 +93,22 @@ body {
         }
       }
     }
+
+    section {
+      p {
+        padding: 0 15px;
+        margin-bottom: 10px;
+      }
+
+      div {
+        ul {
+          list-style: none;
+          line-height: 2;
+          margin-bottom: 10px;
+          padding-left: 30px;
+        }
+      }
+    }
   }
 
   footer {
@@ -98,10 +121,8 @@ body {
     padding: 8px 0;
     
     div {
-
       ul {
         list-style: none;
-
         li {
           display: inline-block;
           padding: 0 3px;
