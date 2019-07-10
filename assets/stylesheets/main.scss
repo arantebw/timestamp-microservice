@@ -38,7 +38,12 @@ body {
     padding: 25px;
     letter-spacing: 2px;
     font-size: 26px;
-    a {
+
+    a,
+    a:link,
+    a:visited,
+    a:active,
+    a:focus {
       color: $secondary-color;
       border: none;
     }
@@ -134,6 +139,7 @@ body {
     div {
       ul {
         list-style: none;
+
         li {
           display: inline-block;
           padding: 0 3px;
