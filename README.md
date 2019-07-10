@@ -1,7 +1,7 @@
 
 # Project Timestamp Microservice
 
-A freeCodeCamp APIs and Microservices Certification project no. 1.
+This is my take of the freeCodeCamp's APIs and Microservices Certification: Timestamp Microservice project.
 
 ---
-Created by [Billy Arante](http://billyarante.tk)
+Created by [Billy Arante](#) from [Philippines](#)
