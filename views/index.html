@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>abw's Timestamp Microservice</title>
+  <title>abw's Timestamp Microservice</title>
 
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
-    <!-- Imports Font Awesome -->
-    <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.css">
-    <script src="/fontawesome/js/all.js"></script>
+  <!-- Imports Font Awesome -->
+  <link rel="stylesheet" type="text/css" href="/fontawesome/css/all.css">
+  <script src="/fontawesome/js/all.js"></script>
 
-    <!-- Imports custom stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
+  <!-- Imports custom stylesheet -->
+  <link rel="stylesheet" type="text/css" href="/stylesheets/main.css">
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <main>
+  <main>
+    <div>
+      <h1><span>abw's</span> Timestamp Microservice</h1>
+      <form method="GET" action="/api/timestamp">
+        <label for="date-string" >Enter a date or UNIX timestamp</label><br>
+        <input type="text" placeholder="e.g., 2019-07-09 or 1562630400000" name="date_string" id="date-string">
+        <input type="submit" value="Send">
+      </form>
+    </div>
+
+    <section>
+      <h2>About</h2>
+    </section>
+
+    <footer>
+      <p>Made with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> from <a href="https://www.google.com/maps/place/Philippines/@11.5563841,113.5790874,5z/data=!3m1!4b1!4m5!3m4!1s0x324053215f87de63:0x784790ef7a29da57!8m2!3d12.879721!4d121.774017?hl=en" target="_blank">Philippines</a> by <a href="http://billyarante.tk" target="_blank">Billy Arante</a></p>
       <div>
-	<h1><span>abw's</span> Timestamp Microservice</h1>
-	<form method="GET" action="/api/timestamp">
-	  <label for="date-string" >Enter a date or UNIX timestamp</label><br>
-	  <input type="text" placeholder="e.g., 2019-07-09 or 1562630400000" name="date_string" id="date-string">
-	  <input type="submit" value="Send">
-	</form>
+        <ul>
+          <li><a href="https://www.freecodecamp.org/arantebw" target="_blank">freeCodeCamp</a></li>
+          <li><a href="https://github.com/arantebw" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/billyarante" target="_blank">LinkedIn</a></li>
+        </ul>
       </div>
-      
-      <section>
-	<h2>About</h2>
-      </section>
-      
-      <footer>
-        <p>Made with <i class="fas fa-heart"></i> and <i class="fas fa-coffee"></i> from <a href="https://www.google.com/maps/place/Philippines/@11.5563841,113.5790874,5z/data=!3m1!4b1!4m5!3m4!1s0x324053215f87de63:0x784790ef7a29da57!8m2!3d12.879721!4d121.774017?hl=en" target="_blank">Philippines</a> by <a href="http://billyarante.tk" target="_blank">Billy Arante</a></p>
-        <div>
-          <ul>
-            <li><a href="https://www.freecodecamp.org/arantebw" target="_blank">freeCodeCamp</a></li>
-            <li><a href="https://github.com/arantebw" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/billyarante" target="_blank">LinkedIn</a></li>
-          </ul>
-        </div>
-      </footer>
-    </main>
+    </footer>
+  </main>
 
-  </body>
+</body>
 </html>
