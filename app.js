@@ -32,13 +32,16 @@ app.get('/', (req, res) => {
 });
 
 // Your first API endpoint... 
-let dateString, year, month, day;
+let dateString, newDate, year, month, day;
 app.get('/api/timestamp/', (req, res, next) => {
-  dateString = req.query.date_string;
-  // year, month, day = ...dateString.split('-');
+  dateString = req.query.date_string.split('-');
+  year = parseInt(dateString[0]);
+  month = parseInt(dateString[1] - 1);
+  day = parseInt(dateString[2]);
+  newDate = new Date(Date.UTC(year, month, day));
   next();
 }, (req, res) => {
-  res.json({"unix": dateString, "utc": new Date(Date.UTC(year, month, day))});
+  res.json({"date_string": req.query.date_string, "unix": null, "utc": newDate.toUTCString()});
 });
 
 app.get('/hello', (req, res) => {
