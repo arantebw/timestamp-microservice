@@ -88,7 +88,9 @@ body {
         }
       }
     }
-    section {      
+    section {
+      margin-bottom: 50px;
+
       p {
         padding: 0 15px;
         margin-bottom: 10px;
@@ -114,7 +116,7 @@ body {
     text-align: center;
     bottom: 0;
     width: 100%;
-    line-height: 2;
+    line-height: 3;
     font-size: 11px;
     padding: 8px 0;
     div {
@@ -125,6 +127,84 @@ body {
           padding: 0 3px;
         }
       }
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  body {
+    main {
+      section {
+        p {
+          font-size: 16px;
+        }
+        div {
+          ul {
+            font-size: 16px;
+          }
+        }
+      }
+      min-height: 100vh;
+      div {
+        h1 {
+          font-size: 30px;
+        }
+      }
+      footer {
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (min-width: 414px) {
+  main {
+    min-height: 100vh;
+    div {
+      h1 {
+        font-size: 34px;
+      }
+    }
+    footer {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    main {
+      width: 80%;
+      section {
+        div {
+          img {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    main {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    main {
+      width: 70%;
+    }
+  }
+}
+
+@media (min-width: 1440px) {
+  body {
+    main {
+      width: 70%;
     }
   }
 }
