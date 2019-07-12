@@ -23,36 +23,29 @@ app.use(sass({
 app.use(express.static(__dirname + '/public'));
 
 // Enable CORS
-app.use(cors({optionSuccessStatus: 200}));  // some legacy browsers choke on 204
+app.use(cors({ optionSuccessStatus: 200 }));  // some legacy browsers choke on 204
 
 // Mount the client page
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-let date, dateString, newDate, year, month, day;
+let dateInput, dateString, newDate, year, month, day;
 app.get('/api/timestamp/', (req, res, next) => {
-  // Check date validity
-  if (new Date(req.query.date_string) == 'Invalid Date') {
-    res.json({'error': 'Invalid Date'});
+  if (req.query.date_string === '') {
+    dateInput = new Date();
   } else {
-    if (req.query.date_string === '') {
-      dateString = new Date();
-      year = parseInt(dateString.getFullYear());
-      month = parseInt(dateString.getMonth());
-      day = parseInt(dateString.getDate());
-    } else {
-      // If date_string is yyyy-mm-dd format
-      dateString = req.query.date_string.split('-');
-      year = parseInt(dateString[0]);
-      month = parseInt(dateString[1] - 1);
-      day = parseInt(dateString[2]);
+    if (new Date(req.query.date_string) == 'Invalid Date') {
+      res.json({ "error": "Invalid Date" });
     }
-    newDate = new Date(Date.UTC(year, month, day));
-    next();
+    dateInput = new Date(req.query.date_string);
+    if (!dateInput.getTime()) {
+      dateInput = new Date(parseInt(req.query.date_string));
+    }
   }
+  next();
 }, (req, res) => {
-  res.json({"unix": newDate.getTime(), "utc": newDate.toUTCString()});
+    res.json({ "unix": dateInput.getTime(), "utc": dateInput.toUTCString() });
 });
 
 module.exports = app;
