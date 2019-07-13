@@ -189,6 +189,26 @@ body {
   body {
     main {
       width: 80%;
+      div {
+        form {
+          padding: 0 100px;
+        }
+      }
+      section {
+        p {
+          padding: 0 100px;
+        }
+        div {
+          ul,
+          img {
+            padding-left: 100px;
+          }
+        }
+      }
+    }
+    h2,
+    h3 {
+      padding: 0 100px;
     }
   }
 }
