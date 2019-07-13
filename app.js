@@ -1,5 +1,4 @@
 // app.js
-// Main module of the app.
 
 'use strict';
 require('dotenv').config();
@@ -30,22 +29,22 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/index.html');
 });
 
-let dateInput, dateString, newDate, year, month, day;
+let date, year, month, day;
 app.get('/api/timestamp/', (req, res, next) => {
   if (req.query.date_string === '') {
-    dateInput = new Date();
+    date = new Date();
   } else {
-    if (new Date(req.query.date_string) == 'Invalid Date') {
-      res.json({ "error": "Invalid Date" });
+    date = new Date(req.query.date_string);
+    if (!date.getTime()) {
+      date = new Date(parseInt(req.query.date_string));
     }
-    dateInput = new Date(req.query.date_string);
-    if (!dateInput.getTime()) {
-      dateInput = new Date(parseInt(req.query.date_string));
+    if (date == 'Invalid Date') {
+      res.json({ "error": "Invalid Date" });
     }
   }
   next();
 }, (req, res) => {
-    res.json({ "unix": dateInput.getTime(), "utc": dateInput.toUTCString() });
+    res.json({ "unix": date.getTime(), "utc": date.toUTCString() });
 });
 
 module.exports = app;

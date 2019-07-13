@@ -1,9 +1,6 @@
 // server.js
-// where your node app starts
 
 'use strict';
-
-// init project
 const app = require('./app');
 
 // listen for requests :)
